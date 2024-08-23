@@ -1,3 +1,3 @@
-# CS2040
+# CS2040 Data Structures & Algorithms
 
-Lab algo or something
+Here are my lab codes lol
