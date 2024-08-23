@@ -1,0 +1,8 @@
+/*Strat
+ * Sort all the input so all combis with same courses will show as the same input
+ * Store combos as string
+ * Create hashmap to store count of combos
+ * Store string "combo" + ""count" as a string into an Array
+ * Sort the Array by last digit
+ * Find highest count and multiply it by number of combos with that count
+ */

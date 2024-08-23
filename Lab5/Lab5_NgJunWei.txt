@@ -1,0 +1,9 @@
+/*Strat
+ *Create 2 priority queues, 1 for workstations 1 for researchers
+We order the priority queue by the arrival time of the researcher
+We order PQUEUE for workstation by the time it is done being used by researcher
+then for every researcher, we check the PQUEUE workstation
+if workstation PQUEUE is empty or the arrival time is < any end time of workstation, we need to unlock
+Also check that the workstation will lock after y minutes so we can remove from PQUEUE once y minutes is up
+Rinse and repeat YAY
+ */

@@ -1,0 +1,18 @@
+Coconut.java
+
+have n players with n hands at first
+phrase with S syllabus is played
+queue has length n at the start
+
+if lands on folded arms, the folded arms is removed and 2 fists are added to the FRONT
+
+if land on fist, the fist is turn to palms down and added to the BACK
+
+if land on palms down, the hand is placed at the back and REMOVED
+
+if both hands of player is at the back, they are out of game
+
+sample queue = [folded(1), folded(2)]
+1st run
+[fist(2), fist(2), folded(1)]
+etc

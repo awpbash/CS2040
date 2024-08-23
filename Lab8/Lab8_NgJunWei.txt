@@ -1,0 +1,10 @@
+/* Strat
+ * Once we finish building the matrix, we scan through the matrix and whenever we find "L"
+ * We run DFS. Since "C" can take any status, if "C" is connected to "L" then greedily we should treat it as "L"
+ * So in our DFS, the stopping condition shld either be out of boundary OR we hit "W"
+ * Instead of making a visited array, we can just change the ting to "W" to indicate visited
+ * YEP then we DFS all 4 possible directions and when we stop DFS, we increment count by 1
+ * If got no "L" at all then dont even bother DFS-ing all "C" can be "W" and we can just return 0
+ * YEP
+ * 
+ */

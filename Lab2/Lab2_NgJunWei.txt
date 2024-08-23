@@ -1,0 +1,6 @@
+sortofsorting algo
+
+Extract the first 2 letters of each name
+Use a stable sorting algo to sort based on the first 2
+Arrays.sort uses insertion and merge so good enough
+:D

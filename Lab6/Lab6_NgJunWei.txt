@@ -1,0 +1,12 @@
+Kattis Quest or sum shit
+Idea 1, use a priority queue where higher energy higher priority followed by higher gold 
+
+Idea 2:
+TreeSet - no clue wtf it is but apparently is a bBST
+ * We want to first find highest energy quest that can be done and if multiple have same energy, do highest gold
+ * So we create a tree with custom comparator. First sorted by energy then gold
+ * When query is called, we create a dummy quest worth current energy with super high gold and use it to compare with elements in the tree
+ * 
+ * Additionally, we NEED to store ID as we need to differentiate between duplicates. If we have quests with same energy and gold, we will lose the duplicates
+ * and this will affect the final answer. i.e removing duplicated nodes WITHOUT ID will only remove 1 such node and not as many as possible fk u test case 5
+* THAT IS WHY WE NEED TO STORE ID

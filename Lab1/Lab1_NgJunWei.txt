@@ -1,0 +1,10 @@
+t9 spelling algorithm
+
+Assign letters to numbers using ascii values
+ie. a = 97 in ascii then assign 97 to "2" on keypad
+b = 98 in ascii then assign 98 to "22" on keypad using (98-96) * "2"
+c = 99 in ascii then assign 99 to "222" on keypad using (99 - 96) * "2
+etc
+
+Iterate through the strings then using if else conditions retrieve the correct keypad values
+-Jun Wei
