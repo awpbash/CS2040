@@ -1,11 +1,15 @@
 /*Strat
- *Create 2 priority queues, 1 for workstations 1 for researchers
-We order the priority queue by the arrival time of the researcher
-We order PQUEUE for workstation by the time it is done being used by researcher
-then for every researcher, we check the PQUEUE workstation
-if workstation PQUEUE is empty or the arrival time is < any end time of workstation, we need to unlock
-Also check that the workstation will lock after y minutes so we can remove from PQUEUE once y minutes is up
+We will create 2 priority queues, 1 for researchers and 1 for workstation
+The researcher class will hold 2 attributes startTime which is their arrival time and endTime which is
+startTime + y -> time they leave workstation
+Workstation class will only contain endTime of last researcher
+We first push all researchers into PQ 
+For each researcher, we check if workstation PQ has any workstations
+if there is no then we add one, else we check the time conditions.
+If researcher.startTime <= workstation.endTime + y then it means we can reuse so count += 1
+else if researcher.startTime > workstation.endTime + y then it means we need to open 1 workstation
 Rinse and repeat YAY
+Since question only wants how many we saved so thats why we only count number of reuses
  */
 import java.util.*;
 import java.io.*;
