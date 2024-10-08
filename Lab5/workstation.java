@@ -38,11 +38,11 @@ public class workstation{
         for (int i = 0; i < x; i++) {
             Researcher lol = researchers.peek(); //First resercher to arrive
             while (!workstations.isEmpty() && (workstations.peek() + y) < lol.startTime) {
-                workstations.poll(); //If got available workstation that havent close, use it FIRST!!!
+                workstations.poll(); //Benchode this workstation close alr so remove
             }
             if (!workstations.isEmpty() && lol.startTime <= workstations.peek() + y && lol.startTime >= workstations.peek()) {
-                workstations.poll(); //If workstation is being used or start time is > workstation idle time, we need to unlock new workstation
-                count += 1; //Unlock WORKSTATION
+                workstations.poll(); //diswan means we can reuse the workstation as the start time is after previous end time and not yet closed
+                count += 1; //Unlock 1 less WORKSTATION
             }
             Researcher nextRsAtWorkstation = researchers.poll();
             workstations.add(nextRsAtWorkstation.endTime);
