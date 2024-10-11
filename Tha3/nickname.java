@@ -103,6 +103,8 @@ public class nickname{
             } else{ // key to insert is more than node, insert into right subtree. Same value also put right tree
                 node.right = insert(node.right, key);
             }
+        
+
             updateHeight(node);
             int bf = balanceFactor(node);
             //Case 1 Left-Left -> do 1 right rotation
@@ -231,18 +233,20 @@ public class nickname{
         }   
     
         for (int j = 0; j < numLines; j++) {
-            String name = br.readLine();
-            for (int k = 0; k < name.length(); k++) {
-                String subName = name.substring(0, k+1);
-                if (treesArray[k].find(subName) == null) {
-                    treesArray[k].insert(subName);
-                }
-                else {
-                    treesArray[k].find(subName).counts++;
-                }
-                //System.out.println(subName);
-            }
+        String name = br.readLine();
+        StringBuilder subNameBuilder = new StringBuilder();
+        for (int k = 0; k < name.length(); k++) {
+            subNameBuilder.append(name.charAt(k));
+            String subName = subNameBuilder.toString();
+            AVL_Trees.Node node = treesArray[k].find(subName);
+            if (node == null) {
+                treesArray[k].insert(subName);
+            } else {
+                node.counts++;  // Directly increment the count if already found
         }
+    }
+}
+
     
         int queries = Integer.parseInt(br.readLine());
         for (int x = 0; x < queries; x++) {
