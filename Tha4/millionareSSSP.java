@@ -8,7 +8,7 @@
 import java.io.*;
 import java.util.*;
 
-public class duck {
+public class millionaireSSSP {
     //4 adjacent coordinates
     public static int[][] moves = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}}; 
     public static void main(String[] args) throws IOException {
