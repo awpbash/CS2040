@@ -1,7 +1,7 @@
 /* Big boi algo
  * First we do kosaraju to find SCCs
  * we also store information about sccSize and sccID of each vertex + indegree of each SCC
- * now we TRACE the edges, if u and v have different sccID, then they are in different SCCs, meaning we can send 1 less signal
+ * now we TRACE the edges. For each edge (u, v) if u and v have different sccID, then they are in different SCCs, meaning we can send 1 less signal
  * if the SCC has only 1 vertex and indegree is 0, then it is a solobot
  * if the SCC has more than 1 vertex and indegree is 0, then it is a botnet that needs a signal
  */
